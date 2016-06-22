@@ -17,7 +17,7 @@ if len(sys.argv) <= 1:
 
 api = xmlrpclib.ServerProxy('https://rpc.gandi.net/xmlrpc/')
 
-no_fetch_extract = tldextract.TLDExtract(suffix_list_url=False)
+no_fetch_extract = tldextract.TLDExtract(suffix_list_urls=None)
 extract = no_fetch_extract(sys.argv[1])
 domain = extract.domain + '.' + extract.suffix
 subdomain = extract.subdomain
